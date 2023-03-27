@@ -1,1 +1,14 @@
 Bookings index
+
+<h1>Bookings</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      <%= booking.location %>
+      <%= booking.duration %>
+      <%= booking.price %>
+      <%= booking.status %>
+    </li>
+  <% end %>
+</ul>

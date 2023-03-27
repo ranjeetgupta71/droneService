@@ -1,1 +1,13 @@
 Customers index
+
+<h1>Customers</h1>
+
+<ul>
+  <% @customers.each do |customer| %>
+    <li>
+      <%= customer.name %>
+      <%= customer.phone %>
+      <%= customer.email %>
+    </li>
+  <% end %>
+</ul>
