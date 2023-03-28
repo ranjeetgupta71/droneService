@@ -8,11 +8,7 @@
 
 # static data
 NAMES = [
-  "Arjun", "Aum", "Ishan", "Krish", "Moksh", "Rishi",
-  "Veer", "Ari", "Dev", "Jaiden", "Jay", "Kalpen", "Sai",
-  "Zayn", "Jiyan", "Kabir", "Kahan", "Kailash", "Kaiyen",
-  "Kalpen", "Karam"
-]
+  "Arjun", "Aum", "Ishan", "Krish", "Moksh", "Rishi", "Veer"]
 
 LOCATIONS_HASH = [
   { name: "Mumbai", state: "Maharashtra" },
