@@ -13,6 +13,17 @@ Rails.application.routes.draw do
   get '/customers/:id', to: 'customers#show'
   get '/customers/:id/edit', to: 'customers#edit'
 
+  # posting, updating and deleting bookings
+  post '/bookings', to: 'bookings#create'
+  put '/bookings/:id', to: 'bookings#update'
+  delete '/bookings/:id', to: 'bookings#delete'
+
+  #p osting, updating and deleting customers
+  post '/customers', to: 'customers#create'
+  put '/customers/:id', to: 'customers#update'
+  delete '/customers/:id', to: 'customers#delete'
+
+
   # get '/patients/:id', to: 'patients#show'
 
 end
