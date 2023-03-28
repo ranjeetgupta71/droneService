@@ -40,8 +40,9 @@ end
 
 locations = Location.all
 durations = Duration.all
+customers = Customer.all
 
 locations.each do |l|
   random_duration = durations.sample
-  Booking.create({ location: l.name, status:"Active", duration: random_duration.time, price: random_duration.price })
+  Booking.create({ location: l.name, status:"Active", duration: random_duration.time, price: random_duration.price, customer_id: customers.sample.id })
 end
