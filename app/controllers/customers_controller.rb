@@ -13,7 +13,7 @@ class CustomersController < ApplicationController
   end
 
   def edit
-
+    @customer = Customer.find_by({id: params[:id]})
   end
 
   def create
@@ -22,7 +22,15 @@ class CustomersController < ApplicationController
   end
 
   def update
-
+    # update record in db
+    # redirect to record's show page
+    @customer = Customer.find_by({id: params[:id]})
+    @customer.update({
+      name: params[:name],
+      email: params[:email],
+      phone: params[:phone],
+    })
+    redirect_to({controller: 'customers', action: 'show',id: @customer.id })
   end
 
   def delete
