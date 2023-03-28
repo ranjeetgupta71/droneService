@@ -17,8 +17,13 @@ class BookingsController < ApplicationController
   end
 
   def create
-    Booking.create({location: params[:location],duration: params[:duration],price: params[:price],status: params[:status]})
-    redirect_to :controller => 'bookings', :action => 'index'
+    Booking.create({
+      location: params[:location],
+      duration: params[:duration],
+      price: params[:price],
+      status: params[:status]
+    })
+    redirect_to({controller: 'bookings', action: 'index' })
   end
 
   def update
