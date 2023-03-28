@@ -22,18 +22,28 @@ class CustomersController < ApplicationController
   end
 
   def update
-    # update record in db
-    # redirect to record's show page
+    # find customer
     @customer = Customer.find_by({id: params[:id]})
+
+    # update customer
     @customer.update({
       name: params[:name],
       email: params[:email],
       phone: params[:phone],
     })
-    redirect_to({controller: 'customers', action: 'show',id: @customer.id })
+
+    # redirect to customer's show page
+    redirect_to({ controller: 'customers', action: 'show',id: @customer.id })
   end
 
-  def delete
+  def destroy
+    # find customer
+    @customer = Customer.find_by({id: params[:id]})
 
+    # destroy customer
+    @customer.destroy
+
+    # redirect to customer's index page
+    redirect_to({ controller: 'customers', action: 'index' })
   end
 end

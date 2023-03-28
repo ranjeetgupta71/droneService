@@ -39,7 +39,7 @@ class BookingsController < ApplicationController
     redirect_to({controller: 'bookings', action: 'show',id: @booking.id })
   end
 
-  def delete
+  def destroy
 
   end
 

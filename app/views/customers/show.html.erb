@@ -13,4 +13,12 @@
     <strong>Phone:</strong>
     <%= @customer.phone %>
   </p>
+
+  <p>
+    <a href=<%= "/customers/#{@customer.id}/edit" %>>Edit</a>
+    <li><%= link_to "Destroy", customers_path(@customer), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+  </p>
 </div>

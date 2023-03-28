@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   get '/bookings/:id/edit', to: 'bookings#edit'
   post '/bookings', to: 'bookings#create'
   put '/bookings/:id', to: 'bookings#update'
-  delete '/bookings/:id', to: 'bookings#delete'
+  delete '/bookings/:id', to: 'bookings#destroy'
 
   # customers related routes
   get '/customers', to: 'customers#index'
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
   get '/customers/:id/edit', to: 'customers#edit'
   post '/customers', to: 'customers#create'
   put '/customers/:id', to: 'customers#update'
-  delete '/customers/:id', to: 'customers#delete'
+  delete '/customers/:id', to: 'customers#destroy'
 
   get '/locations', to: 'locations#index'
   get '/pricings', to: 'durations#index'
