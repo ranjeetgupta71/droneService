@@ -1,20 +1,30 @@
-Bookings Edit
+<br>
+<h4 class="text-center">Edit Booking Details</h4>
 
+<form action="/bookings" method="post">
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <input type="text" id="location" class="form-control" placeholder="Enter location" name="location" value=<%= @booking.location %>  required>
+    <br>
+  </div>
 
-<form action=<%= "/bookings/#{@booking.id}" %> method="put">
+  <div class="form-group">
+    <label for="status">Status</label>
+    <input type="text" id="status" class="form-control" placeholder="Enter status" name="status" value=<%= @booking.status %> required>
+    <br>
+  </div>
 
-  <label for="location">Location</label>
-  <input type="text" placeholder="Enter Location..." id="location" name="location" value=<%= @booking.location %> ><br><br>
+  <div class="form-group">
+    <label for="duration">Duration</label>
+    <input type="text" id="duration" class="form-control" placeholder="Enter duration" name="duration" value=<%= @booking.duration %> required>
+    <br>
+  </div>
 
-  <label for="duration">duration</label>
-  <input type="text" placeholder="Enter duration..." id="duration" name="duration" value=<%= @booking.duration %> ><br><br>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" id="price" class="form-control" placeholder="Enter price" name="price" value=<%= @booking.price %> required>
+    <br>
+  </div>
 
-  <label for="price">price</label>
-  <input type="text" placeholder="Enter price..." id="price" name="price" value=<%= @booking.price %> ><br><br>
-
-  <label for="status">status</label>
-  <input type="text" placeholder="Enter status..." id="status" name="status" value=<%= @booking.status %> ><br><br>
-
-
-  <input type="submit" value="Submit" >
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

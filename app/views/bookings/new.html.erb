@@ -1,18 +1,30 @@
- Bookings new
+<br>
+<h4 class="text-center">New Booking Details</h4>
 
 <form action="/bookings" method="post">
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <input type="text" id="location" class="form-control" placeholder="Enter location" name="location" required>
+    <br>
+  </div>
 
-  <label for="location">Location</label>
-  <input type="text" placeholder="Enter Location..." id="location" name="location"><br><br>
+  <div class="form-group">
+    <label for="status">Status</label>
+    <input type="text" id="status" class="form-control" placeholder="Enter status" name="status" required>
+    <br>
+  </div>
 
-  <label for="duration">Duration</label>
-  <input type="text" placeholder="Enter Duration..." id="duration" name="duration"><br><br>
+  <div class="form-group">
+    <label for="duration">Duration</label>
+    <input type="text" id="duration" class="form-control" placeholder="Enter duration" name="duration" required>
+    <br>
+  </div>
 
-  <label for="price">Price</label>
-  <input type="text" placeholder="Enter Price..." id="price" name="price"><br><br>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" id="price" class="form-control" placeholder="Enter price" name="price" required>
+    <br>
+  </div>
 
-  <label for="status">Status</label>
-  <input type="text" placeholder="Enter Status..." id="status" name="status"><br><br>
-
-  <input type="submit" value="Submit" >
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

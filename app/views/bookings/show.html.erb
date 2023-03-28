@@ -1,7 +1,17 @@
 <div>
   <p>
-    <strong>Location:</strong>
+    <strong>Booking location:</strong>
     <%= @booking.location %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= @booking.status %>
+  </p>
+
+  <p>
+    <strong>Duration:</strong>
+    <%= @booking.duration %>
   </p>
 
   <p>
@@ -10,13 +20,10 @@
   </p>
 
   <p>
-    <strong>Duration:</strong>
-    <%= @booking.duration %>
+    <a href=<%= "/bookings/#{@booking.id}/edit" %>>Edit</a>
+    <li><%= link_to "Destroy", bookings_path(@booking), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
   </p>
-
-    <p>
-    <strong>Status:</strong>
-    <%= @booking.status %>
-  </p>
-
 </div>
