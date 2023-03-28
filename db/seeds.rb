@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-20.times do |n|
+10.times do |n|
   Customer.create({ name: "Customer #{n}",email:"abc-#{n}@gmail.com",phone:"123" })
 end
 
-20.times do |n|
+10.times do |n|
   Booking.create({ location: "Location #{n}",status:"Active",duration:"10 min",price: "50" })
 end
 
-20.times do |n|
+10.times do |n|
   Location.create({ name: "Ajmer", state: "Rajasthan"})
 end
 
