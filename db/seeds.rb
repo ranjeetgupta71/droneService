@@ -6,19 +6,46 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-10.times do |n|
-  Customer.create({ name: "Customer #{n}",email:"abc-#{n}@gmail.com",phone:"123" })
-end
+# static data
+NAMES = [
+  "Arjun", "Aum", "Ishan", "Krish", "Moksh", "Rishi",
+  "Veer", "Ari", "Dev", "Jaiden", "Jay", "Kalpen", "Sai",
+  "Zayn", "Jiyan", "Kabir", "Kahan", "Kailash", "Kaiyen",
+  "Kalpen", "Karam"
+]
 
-10.times do |n|
-  Booking.create({ location: "Location #{n}",status:"Active",duration:"10 min",price: "50" })
-end
+LOCATIONS_HASH = [
+  { name: "Mumbai", state: "Maharashtra" },
+  { name: "Delhi", state: "Delhi" },
+  { name: "Bangalore", state: "Karnataka" },
+  { name: "Hyderabad", state: "Telangana" },
+  { name: "Ahmedabad", state: "Gujarat" },
+  { name: "Chennai", state: "Tamil" },
+  { name: "Kolkata", state: "West" },
+  { name: "Surat", state: "Gujarat" },
+  { name: "Pune", state: "Maharashtra" },
+  { name: "Jaipur", state: "Rajasthan" },
+]
 
-10.times do |n|
-  Location.create({ name: "Ajmer", state: "Rajasthan"})
-end
-
+# creates durations
 Duration.create({ time: "15 min",price: "$100" })
 Duration.create({ time: "30 min",price: "$180" })
 Duration.create({ time: "45 min",price: "$250" })
 Duration.create({ time: "1 hour",price: "$300" })
+
+# creates locations
+LOCATIONS_HASH.each do |l|
+  Location.create({ name: l[:name], state: l[:state] })
+end
+
+NAMES.each_with_index do |customer_name, index|
+  Customer.create({ name: customer_name, email:"user-#{index}@gmail.com",phone:"1234567890" })
+end
+
+locations = Location.all
+durations = Duration.all
+
+locations.each do |l|
+  random_duration = durations.sample
+  Booking.create({ location: l.name, status:"Active", duration: random_duration.time, price: random_duration.price })
+end
