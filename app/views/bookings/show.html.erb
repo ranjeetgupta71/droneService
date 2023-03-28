@@ -1,12 +1,22 @@
-Bookings show
-
 <div>
-  <%= @booking.location %>
-  <%= @booking.price %>
-  <%= @booking.duration %>
-  <%= @booking.status %>
-</div>
+  <p>
+    <strong>Location:</strong>
+    <%= @booking.location %>
+  </p>
 
-<a href=<%= "/bookings/#{@booking.id}/edit" %>>
-  Edit
-</a>
+  <p>
+    <strong>Price:</strong>
+    <%= @booking.price %>
+  </p>
+
+  <p>
+    <strong>Duration:</strong>
+    <%= @booking.duration %>
+  </p>
+
+    <p>
+    <strong>Status:</strong>
+    <%= @booking.status %>
+  </p>
+
+</div>

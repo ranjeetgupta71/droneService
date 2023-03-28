@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 4) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_28_171250) do
   create_table "bookings", force: :cascade do |t|
     t.string "location"
+    t.string "status"
     t.text "duration"
     t.integer "price"
-    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 4) do
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "phone"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

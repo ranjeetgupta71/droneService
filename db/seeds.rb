@@ -11,11 +11,11 @@
 end
 
 20.times do |n|
-  Booking.create({ location: "Location #{n}",status:"Active",duration:"10min",price: "50" })
+  Booking.create({ location: "Location #{n}",status:"Active",duration:"10 min",price: "50" })
 end
 
 20.times do |n|
-  Location.create({ name: "Ajmer",state: "Rajasthan"})
+  Location.create({ name: "Ajmer", state: "Rajasthan"})
 end
 
 Duration.create({ time: "15 min",price: "$100" })
