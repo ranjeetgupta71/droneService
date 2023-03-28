@@ -21,14 +21,13 @@ class BookingsController < ApplicationController
       location: params[:location],
       duration: params[:duration],
       price: params[:price],
-      status: params[:status]
+      status: params[:status],
+      customer_id: params[:customer_id]
     })
     redirect_to({controller: 'bookings', action: 'show', id: @booking.id })
   end
 
   def update
-    # update record in db
-    # redirect to record's show page
     @booking = Booking.find_by({id: params[:id]})
     @booking.update({
       location: params[:location],

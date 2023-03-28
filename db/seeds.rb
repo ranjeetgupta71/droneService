@@ -24,10 +24,10 @@ LOCATIONS_HASH = [
 ]
 
 # creates durations
-Duration.create({ time: "15 min",price: "$100" })
-Duration.create({ time: "30 min",price: "$180" })
-Duration.create({ time: "45 min",price: "$250" })
-Duration.create({ time: "1 hour",price: "$300" })
+Duration.create({ time: "15 min", price: 100 })
+Duration.create({ time: "30 min", price: 180 })
+Duration.create({ time: "45 min", price: 250 })
+Duration.create({ time: "1 hour", price: 300 })
 
 # creates locations
 LOCATIONS_HASH.each do |l|
