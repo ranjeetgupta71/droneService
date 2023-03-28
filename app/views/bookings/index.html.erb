@@ -25,7 +25,7 @@
         <td colspan="3">
           <a href=<%= "/booking/#{booking.id}" %>>Show</a>
           <a href=<%= "/booking/#{booking.id}/edit" %>>Edit</a>
-          <%= link_to "Destroy", booking_path(booking), data: {
+          <%= link_to "Destroy", bookings_path(booking), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %>
