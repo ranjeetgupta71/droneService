@@ -1,5 +1,7 @@
 # README
 
+See the [demo video present here](https://drive.google.com/file/d/1emp6u4xFZ-1zvgGBh6ymITvnzCt0uH6T/view?usp=sharing).
+
 ## Framework Used
 
 - Ruby on Rails - A full stack framework that can be used to create both frontend and backend.
