@@ -3,12 +3,21 @@ Bookings index
 <h1>Bookings</h1>
 
 <ul>
+  <a href=<%= "/bookings/new" %>>
+    new
+  </a>
   <% @bookings.each do |booking| %>
     <li>
       <%= booking.location %>
       <%= booking.duration %>
       <%= booking.price %>
       <%= booking.status %>
+
+      <a href=<%= "/bookings/#{booking.id}" %>>
+        show
+      </a>
+
+
     </li>
   <% end %>
 </ul>

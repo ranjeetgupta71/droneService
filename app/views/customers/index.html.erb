@@ -3,11 +3,18 @@ Customers index
 <h1>Customers</h1>
 
 <ul>
+  <a href=<%= "/bookings/new" %>>
+    new
+  </a>
   <% @customers.each do |customer| %>
     <li>
       <%= customer.name %>
       <%= customer.phone %>
       <%= customer.email %>
-    </li>
+      <a href=<%= "/customers/#{customer.id}" %>>
+        show
+      </a>
+
+      </li>
   <% end %>
 </ul>
