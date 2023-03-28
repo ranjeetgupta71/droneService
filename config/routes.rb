@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   put '/customers/:id', to: 'customers#update'
   delete '/customers/:id', to: 'customers#delete'
 
-
+  get '/locations', to: 'locations#index'
   # get '/patients/:id', to: 'patients#show'
 
 end
