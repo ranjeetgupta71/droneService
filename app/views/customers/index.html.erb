@@ -1,22 +1,25 @@
 <h1>Customers</h1>
 
-<ul>
-  <a href=<%= "/customers/new" %>>
-    new
-  </a>
-  <% @customers.each do |customer| %>
-    <li>
-      <%= customer.name %>
-      <%= customer.phone %>
-      <%= customer.email %>
-      <a href=<%= "/customers/#{customer.id}" %>>
-        show
-      </a>
+<div id="customers">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
 
-      <a href=<%= "/customers/#{customer.id}/edit" %>>
-        Edit
-      </a>
-
-      </li>
-  <% end %>
-</ul>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= customer.phone %></td>
+        <td><%= customer.email %></td>
+        <td colspan="2">
+          <a href=<%= "/customers/#{customer.id}" %>>show</a>
+          <a href=<%= "/customers/#{customer.id}/edit" %>>Edit</a>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

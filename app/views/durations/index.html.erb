@@ -1,6 +1,19 @@
-<% @durations.each do |duration| %>
-  <li>
-    <%= duration.time %>
-    <%= duration.price %>
-  </li>
-<% end %>
+<h1>Durations</h1>
+
+<div id="durations">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Duration</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+
+    <% @durations.each do |duration| %>
+      <tr>
+        <td><%= duration.time %></td>
+        <td><%= duration.price %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
