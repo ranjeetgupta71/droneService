@@ -6,6 +6,7 @@ Bookings index
   <a href=<%= "/bookings/new" %>>
     new
   </a>
+
   <% @bookings.each do |booking| %>
     <li>
       <%= booking.location %>
@@ -15,6 +16,10 @@ Bookings index
 
       <a href=<%= "/bookings/#{booking.id}" %>>
         show
+      </a>
+
+      <a href=<%= "/bookings/#{booking.id}/edit" %>>
+        Edit
       </a>
 
 

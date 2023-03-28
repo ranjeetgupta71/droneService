@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   put '/bookings/:id', to: 'bookings#update'
   delete '/bookings/:id', to: 'bookings#delete'
 
-  #p osting, updating and deleting customers
+  # posting, updating and deleting customers
   post '/customers', to: 'customers#create'
   put '/customers/:id', to: 'customers#update'
   delete '/customers/:id', to: 'customers#delete'
