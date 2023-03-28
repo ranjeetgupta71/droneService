@@ -1,15 +1,18 @@
-Customers new
+<br>
+<h4 class="text-center">Enter New Customer Details:</h4>
 
 <form action="/customers" method="post">
 
-  <label for="name">Name</label>
-  <input type="text" id="name" placeholder="Enter your name..." name="name" pattern="[A-Za-z]" required><br><br>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" class="form-control" placeholder="Enter name" name="name" pattern="[A-Za-z]" required>
+  </div><br>
 
   <label for="email">Email</label>
-  <input type="email" id="email" placeholder="Email your address..." name="email" required><br><br>
+  <input type="email" id="email" class="form-control" placeholder="Enter email" name="email" required><br>
 
   <label for="phone">Phone</label>
-  <input type="tel" id="phone" placeholder="Enter Mobile number..." name="phone" pattern="[0-9]{10}" required><br><br>
+  <input type="tel" id="phone" class="form-control" placeholder="Enter phone" name="phone" pattern="[0-9]{10}" required><br>
 
   <input type="submit" value="Submit" >
 </form>

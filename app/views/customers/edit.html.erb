@@ -1,13 +1,13 @@
 Customers Edit
 <form action=<%= "/customers/#{@customer.id}" %> method="put">
 
-  <label for="name">name</label>
+  <label for="name">Name</label>
   <input type="text" placeholder="Enter name" id="name" name="name" value=<%= @customer.name %> ><br><br>
 
-  <label for="email">email</label>
+  <label for="email">Email</label>
   <input type="text" placeholder="Enter email" id="email" name="email" value=<%= @customer.email %> ><br><br>
 
-  <label for="phone">phone</label>
+  <label for="phone">Phone</label>
   <input type="text" placeholder="Enter phone" id="phone" name="phone" value=<%= @customer.phone %> ><br><br>
 
   <input type="submit" value="Submit" >
