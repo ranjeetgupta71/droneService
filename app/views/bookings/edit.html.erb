@@ -1,7 +1,7 @@
 <br>
 <h4 class="text-center">Edit Booking Details</h4>
 
-<form action="/bookings" method="post">
+<form action=<%= "/bookings/#{@bookings.id}" %> method="put">
   <div class="form-group">
     <label for="location">Location:</label>
     <input type="text" id="location" class="form-control" placeholder="Enter location" name="location" value=<%= @booking.location %>  required>

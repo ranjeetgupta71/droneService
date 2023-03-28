@@ -29,7 +29,7 @@ class CustomersController < ApplicationController
     @customer.update({
       name: params[:name],
       email: params[:email],
-      phone: params[:phone],
+      phone: params[:phone]
     })
 
     # redirect to customer's show page
